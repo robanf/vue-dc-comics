@@ -7,16 +7,9 @@
 
       <nav>
           <ul>
-              <li><a href="#">ciao sono mario</a></li>
-              <li><a href="#">ciao sono mario</a></li>
-              <li><a href="#">ciao sono mario</a></li>
-              <li><a href="#">ciao sono mario</a></li>
-              <li><a href="#">ciao sono mario</a></li>
-              <li><a href="#">ciao sono mario</a></li>
-              <li><a href="#">ciao sono mario</a></li>
-              <li><a href="#">ciao sono mario</a></li>
-              <li><a href="#">ciao sono mario</a></li>
-              <li><a href="#">ciao sono mario</a></li>
+              <li v-for="(link,index) in links" :key="index">
+                  <a href="link.url" :class="{active: link.current}">{{link.text}}</a>
+              </li>
           </ul>
       </nav>
       </header>
@@ -25,7 +18,63 @@
 
 <script>
 export default {
-
+    name:'Header',
+    data(){
+        return{
+            links:[
+                {
+                    text:'Character',
+                    url:'#',
+                    current:false
+                },
+                 {
+                    text:'Comic',
+                    url:'#',
+                    current:true
+                },     
+                {
+                    text:'movies',
+                    url:'#',
+                    current:false
+                },
+                {
+                    text:'tv',
+                    url:'#',
+                    current:false
+                },
+                {
+                    text:'games',
+                    url:'#',
+                    current:false
+                },
+                {
+                    text:'collectibles',
+                    url:'#',
+                    current:false
+                },
+                {
+                    text:'video',
+                    url:'#',
+                    current:false
+                },
+                {
+                    text:'fans',
+                    url:'#',
+                    current:false
+                },
+                {
+                    text:'news',
+                    url:'#',
+                    current:false
+                },
+                {
+                    text:'shop',
+                    url:'#',
+                    current:false
+                },
+            ]
+        }
+    }
 }
 </script>
 
@@ -46,19 +95,28 @@ header{
         }
     }
     ul{
-        width: 80%;
         list-style: none;
         display: flex;
         justify-content: start;
+        margin-right:120px;
 
         li{
             margin: 10px;
             display: inline-block;
             font-size: $font-primary;
+            text-transform: uppercase;
+            font-weight: bold;
             a{
                 text-decoration: none;
                 color: black;
+                &:hover,
+                &.active{
+                    color: blue;
+                    border-bottom: 5px solid blue;
+                    padding-bottom:30px ;
+                }
             }
+
         }
     }
 }
