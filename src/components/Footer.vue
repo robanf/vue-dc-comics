@@ -12,6 +12,74 @@
 
               </ul>
           </div>
+          <div>
+              
+          </div>
+          <div class="last-link">
+              <div>
+                        <div class="colonne-link">
+                            <h3>DC COMICS</h3>
+                            <ul>
+                                <li>roba a caso</li>
+                                <li>roba a caso</li>
+                                <li>roba a caso</li>
+                                <li>roba a caso</li>
+                                <li>roba a caso</li>
+                                <li>roba a caso</li>
+                            </ul>
+                            <h3>SHOP</h3>
+                            <ul>
+                                <li>shop dc</li>
+                                <li>shop dc collezionabile</li>
+                            </ul>
+                        </div>
+                        <div class="colonne-link">
+                            <h3>DC</h3>
+                            <ul>
+                                <li> robe dc</li>
+                                <li> robe dc</li>
+                                <li> robe dc</li>
+                                <li> robe dc</li>
+                                <li> robe dc</li>
+                                <li> robe dc</li>
+                                <li> robe dc</li>
+                                <li> robe dc</li>
+                                <li> robe dc</li>
+                                <li> robe dc</li>
+                                <li> robe dc</li>
+                            </ul>
+                        </div>
+                    <div class="colonne-link">
+                        <h3>SITES</h3>
+                        <ul>
+                            <li>DC</li>
+                            <li>MAD Magazine</li>
+                            <li>DC kids</li>
+                            <li>DC universe</li>
+                            <li>DC Power visa</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="imgDC"></div>
+            </div>
+
+                <div class="social-media">
+                    <div>
+                        <a href="#">ISCRIVITI ORA</a>
+                    </div>
+                    <div class="link-social">
+                        <ul>
+                            <li>Follow us</li>
+                            <li> <img src="@/assets/img/footer-facebook.png" alt="">  </li>
+                            <li><img src="@/assets/img/footer-periscope.png" alt=""></li>
+                            <li><img src="@/assets/img/footer-pinterest.png" alt=""></li>
+                            <li><img src="@/assets/img/footer-twitter.png" alt=""></li>
+                            <li><img src="@/assets/img/footer-youtube.png" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+          
       </footer>
   </div>
 </template>
@@ -79,6 +147,53 @@ export default {
                         }
                     }
                 }
+            }
+        }
+        .last-link{
+            background-image: url("../assets/img/footer-bg.jpg");
+            display: flex;
+            justify-content: space-around;
+            height: 300px;
+            .colonne-link{
+                display: inline-block;
+                margin: 0 20px;
+                color: white;
+                ul{
+                    margin: 20px;
+                }
+            }
+            .imgDC{
+                height: 300px;
+                width: 300px;
+                background-image: url("../assets/img/dc-logo-bg.png");
+                background-size:cover ;
+            }
+        }
+        .social-media{
+            background-color: rgb(22, 22, 22);
+            height: 110px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            a{
+                color: white;
+                text-decoration: none;
+                padding: 10px;
+                font-weight: bold;
+                border: 2px solid blue;
+            }
+            .link-social{
+                    color: blue;
+                    font-weight: bold;
+                    ul{
+                        display: flex;
+                        align-items: center;
+                        
+                        li{
+                            display: inline-block;
+                            margin: 0 10px;
+                        }
+                    }
             }
         }
     }
