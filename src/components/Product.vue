@@ -2,10 +2,16 @@
   <div>
       <main>
           <h1>--STIAMO LAVORANDO PER VOI--</h1>
-            <Prodcard
-            v-for="(item,index) in links" 
-            :key="index"
-            :prod="item"/>
+          <div class="container">
+
+          <div class="pippo">
+                <Prodcard
+                v-for="(item,index) in links" 
+                :key="index"
+                :prod="item"/>
+            </div>
+          </div>
+            
             
           
       </main>
@@ -14,13 +20,11 @@
 
 <script>
 import Prodcard from '@/components/Prodcard.vue'
-import Pippo from '@/components/Pippo.vue'
 import array from '@/data/array.js'
 export default {
     name:"product",
-    component:{
+    components:{
         Prodcard,
-        Pippo
     },
      data(){
         return{
@@ -32,26 +36,22 @@ export default {
 
 <style lang="scss" scoped>
     main{
-        
+        color: white;
         background-color: black;
         h1{
             color: white;
             line-height: 100px;
         }
-        ul{
-            display: flex;
-            justify-content: space-evenly;
-            li{
-                display: inline-block;
-                margin: 20px 0px;
-                color: white;
-                text-align: center;
-                .fumetto{
-                    background-color: green;
-                    height: 150px;
-                    width: 150px;
-                }
+        .container{
+            width: 1080px;
+            margin: auto;
 
+            .pippo{
+
+                display: flex;
+                justify-content: space-around;
+                flex-wrap:wrap;
+                width: 100%;
             }
         }
     }
