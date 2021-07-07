@@ -1,15 +1,17 @@
 <template>
   <div>
       <main>
-          <h1>--STIAMO LAVORANDO PER VOI--</h1>
+          
+          <div class="jumbo"></div>
           <div class="container">
-
+            <div class="btn">CURRENT SERIES</div>
           <div class="pippo">
                 <Prodcard
                 v-for="(item,index) in links" 
                 :key="index"
                 :prod="item"/>
             </div>
+            <div class="btn load">LOAD MORE</div>
           </div>
             
             
@@ -38,13 +40,27 @@ export default {
     main{
         color: white;
         background-color: black;
-        h1{
-            color: white;
-            line-height: 100px;
+        .jumbo{
+            background-image: url("../assets/img/jumbotron.jpg");
+            height: 300px;
+            background-size:cover ;
+        }
+        .btn{
+            display: inline-block;
+            padding: 10px;
+            border: 1px solid blue;
+            background-color: blue;
+            font-weight: bold;
+        }
+        .load{
+            text-align: center;
+            margin-left:45% ;
+            margin-bottom: 20px;
         }
         .container{
             width: 1080px;
             margin: auto;
+            background-color: black;
 
             .pippo{
 

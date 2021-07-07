@@ -15,15 +15,19 @@ export default {
 </script>
 
 <style lang="scss" >
+  .Prodotti{
+    width: calc(100% / 6 ) ;
+    border: 15px solid black;
+  }
     .immagini{
 
-      width: calc(100% / 6 -20px) ;
+      
+      height: 250px;
+        background-color: red;
+        margin-top:30px;
 
       img{
-        height: 250px;
-        background-color: red;
-        margin-right: 20px;
-        margin-top:30px;
+       height: 100%;
       }
     }
 </style>
